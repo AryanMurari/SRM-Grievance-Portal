@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Grievance Portal - Search Solutions</title>
+  <style>
+    /* Basic styling for search bar and results table */
+    #search-container {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    #search-input {
+      padding: 5px;
+      border: 1px solid #ccc;
+      flex-grow: 1;
+    }
+    #search-button {
+      padding: 5px 10px;
+      cursor: pointer;
+      background-color: #ddd;
+      border: 1px solid #ccc;
+    }
+    #results-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    #results-table th, #results-table td {
+      padding: 5px;
+      border: 1px solid #ddd;
+    }
+    #results-table th {
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Student Grievance Portal - Search Solutions</h1>
+
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search solutions">
+    <button id="search-button">Search</button>
+  </div>
+
+  <table id="results-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Views</th>
+        <th>Created On</th>
+        <th>Created By</th>
+      </tr>
+    </thead>
+    <tbody>
+      </tbody>
+  </table>
+
+  <script>
+    // Add JavaScript to handle search functionality (optional)
+    const searchInput = document.getElementById('search-input');
+    const searchButton = document.getElementById('search-button');
+    const resultsTable = document.getElementById('results-table');
+
+    searchButton.addEventListener('click', () => {
+      const searchTerm = searchInput.value;
+      // Simulate search logic (replace with logic to fetch data from server)
+      const solutions = [
+        { id: 1, title: "Solution for missing grades", views: 50, createdOn: "2023-10-25", createdBy: "John Doe" },
+        { id: 2, title: "How to request a leave of absence", views: 120, createdOn: "2023-11-01", createdBy: "Jane Smith" },
+        // Add more solution objects as needed
+      ];
+
+      // Clear existing results
+      resultsTable.getElementsByTagName('tbody')[0].innerHTML = "";
+
+      // Filter and display solutions based on search term
+      const filteredSolutions = solutions.filter(solution => solution.title.toLowerCase().includes(searchTerm.toLowerCase()));
+      if (filteredSolutions.length > 0) {
+        filteredSolutions.forEach(solution => {
+          const tableRow = resultsTable.insertRow();
+          tableRow.innerHTML = `
+            <td>${solution.id}</td>
+            <td>${solution.title}</td>
+            <td>${solution.views}</td>
+            <td>${solution.createdOn}</td>
+            <td>${solution.createdBy}</td>
+          `;
+        });
+      } else {
+        const tableRow = resultsTable.insertRow();
+        tableRow.innerHTML = <td colspan="5">No solutions found matching your search.</td>;
+      }
+    });
+  </script>
+
+</body>
+</html>
