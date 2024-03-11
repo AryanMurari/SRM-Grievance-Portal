@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="/action_page.php" method="post">
+  <fieldset>
+    <legend>Student request tab</legend>
+    <label for="category">Category:</label>
+    <select id="category" name="category" onchange="showSubcategory()">
+      <option value="">Select Category</option>
+      <option value="faculty_staff">Faculty & Staff</option>
+      <option value="admissions">Admissions</option>
+      <option value="ragging">Ragging</option>
+      <option value="student_conflict">Student Conflict</option>
+      <option value="examinations">Examinations</option>
+    </select>
+
+    <label for="subcategory">Subcategory:</label>
+    <select id="subcategory" name="subcategory" disabled> <option value="">Select Subcategory (if applicable)</option>
+    </select><br>
+
+    <script>
+      function showSubcategory() {
+        const category = document.getElementById("category").value;
+        const subcategory = document.getElementById("subcategory");
+        subcategory.disabled = false; // Enable subcategory on category change
+        subcategory.innerHTML = ""; // Clear existing options
+
+        if (category === "faculty_staff") {
+          subcategory.innerHTML = `
+            <option value="">Select Subcategory</option>
+            <option value="attendance">Attendance</option>
+            <option value="class_timetable">Class Timetable</option>
+            <option value="academic_integrity">Academic Integrity Dispute</option>
+            <option value="internal_assessment">Internal Assessment</option>
+          `;
+        } else if (category === "admissions") {
+          subcategory.innerHTML = `
+            <option value="">Select Subcategory</option>
+            <option value="withholding_documents">Withholding of Documents</option>
+            <option value="education_quality">Education Quality</option>
+            <option value="inadequate_resources">Inadequate Learning Resources</option>
+          `;
+        } else {
+          // Clear options for other categories (optional)
+          subcategory.innerHTML = <option value="">Select Subcategory</option>;
+          subcategory.disabled = true; // Disable subcategory if not applicable
+        }
+      }
+    </script>
+
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject">
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+      <option value="">Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select><br>
+
+    <label for="mobile">Mobile Number:</label>
+    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}"> (10 digit phone number)<br>
+
+    <label for="attachments">Attachments:</label>
+    <input type="file" id="attachments" name="attachments">
+
+    <button type="submit">Submit</button>
+  </fieldset>
+</form>
+
+</body>
+</html>
