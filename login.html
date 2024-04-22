@@ -98,21 +98,19 @@
                   </div>
                </div>
                <div class="col-md-6">
-                  <div ng-controller="loginCtrl">
-                  <form name="loginForm" id="request" class="main_form" ng-submit="submitForm()" novalidate>
+                <!-- <div ng-controller="loginCtrl"> -->
+                  <form name="loginForm" id="request" class="main_form" onsubmit="redirect()" novalidate>
                      <div class="row">
-                     <div class="col-md-12">
-                         <input class="contactus" placeholder="Email*" type="email" name="email" ng-model="user.email" required>
-                         <span class="error" ng-show="loginForm.email.$error.required">Email is required.</span>
-                         <span class="error" ng-show="loginForm.email.$error.email">Invalid email format.</span>
+                         <div class="col-md-12">
+                             <input class="contactus" placeholder="Email*" type="email" name="email" id="email" required>
+                             <span class="error" id="emailError" style="display: none;">Email is required.</span>
+                         </div>
+                         <div class="col-md-12">
+                             <input class="contactus" placeholder="Password" type="password" name="password" id="password" required minlength="6">
+                             <span class="error" id="passwordError" style="display: none;">Password must be at least 6 characters.</span>
+                         </div>
+                         <button class="send_btn" type="submit">Login</button>
                      </div>
-                     <div class="col-md-12">
-                         <input class="contactus" placeholder="Password" type="password" name="password" ng-model="user.password" required ng-minlength="6">
-                         <span class="error" ng-show="loginForm.password.$error.required">Password is required.</span>
-                         <span class="error" ng-show="loginForm.password.$error.minlength">Password must be at least 6 characters.</span>
-                     </div>
-                     <button class="send_btn" formaction="requesttab.html" type="submit" ng-disabled="loginForm.$invalid">Login</button>
-                  </div>
                  </form>
                </div>
                </div>
@@ -160,5 +158,35 @@
              };
          });
      </script>
+    <script>
+      function redirect() {
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+  
+          var emailError = document.getElementById("emailError");
+          var passwordError = document.getElementById("passwordError");
+  
+          // Reset error messages
+          emailError.style.display = "none";
+          passwordError.style.display = "none";
+  
+          if (email === 'aryan@srmist.edu.in' && password === '789123') {
+              window.location.href = 'aryan.html';
+          } else if (email === 'satya@srmist.edu.in' && password === '123456') {
+              window.location.href = 'satya.html';
+          } else {
+              // Show error messages or handle invalid credentials as needed
+              // For simplicity, showing error messages here
+              if (email === '') {
+                  emailError.style.display = "block";
+              }
+              if (password === '' || password.length < 6) {
+                  passwordError.style.display = "block";
+              }
+              // Prevent form submission
+              return false;
+          }
+      }
+  </script>
    </body>
 </html>
