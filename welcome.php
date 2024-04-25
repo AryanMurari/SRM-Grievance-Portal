@@ -20,7 +20,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 
     <title>Welcome - <?php $_SESSION['username']?></title>
   </head>
-  <body>
+  <body class="main-layout inner_page">
     <?php require '_nav.php' ?>
     Welcome - <?php echo $_SESSION['username']?>
     <!-- Optional JavaScript -->
