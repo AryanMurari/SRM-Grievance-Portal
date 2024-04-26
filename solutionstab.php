@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
+    header("location: login.php");
+    exit;
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,10 +98,13 @@
                          <a class="nav-link" href="about.html">Policy</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="requesttab.html">Requests</a>
+                        <a class="nav-link" href="newrequest.html">New Request</a>
+                     </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="requesttab.php">Requests</a>
                      </li>
                       <li class="nav-item active">
-                         <a class="nav-link" href="login.html">Login</a>
+                         <a class="nav-link" href="login.php">Login</a>
                       </li>
                    </ul>
                 </div>
@@ -107,7 +120,9 @@
     </div>
  </div>
  <!-- end header inner -->
-
+ <div class="titlepage text_align_center">
+  <h2> Welcome  <?php echo $_SESSION['username']?><h2>
+</div>
  <h1 style="margin: 20px;"><b>Solutions Tab</b></h1>
   
   <div id="search-container">
@@ -166,7 +181,8 @@
       }
     });
   </script>
-<!--  footer -->
+<!--  footer --> 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <footer>
   <div class="footer">
     

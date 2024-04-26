@@ -39,6 +39,9 @@
                       <li class="nav-item">
                         <a class="nav-link" href="requesttab.html">Requests</a>
                      </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="solutionstab.php">Solutions</a>
+                     </li>
                       <li class="nav-item active">
                          <a class="nav-link" href="login.php">Login</a>
                       </li>

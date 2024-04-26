@@ -123,7 +123,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
  <div class="titlepage text_align_center">
   <h2> Welcome  <?php echo $_SESSION['username']?><h2>
 </div>
- <h1 style="margin: 20px;"><b>Request Tab</b></h1>
+ <h2 style="margin: 20px;"><b>Request Tab</b></h2>
   
   <div id="search-container">
     <input type="text" id="search-input" maxlength="100px" placeholder="Search requests">
@@ -192,7 +192,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
         <div class="container">
            <div class="row">
               <div class="col-md-12">
-                 <p>© 2020 All Rights Reserved SRMIST. Design by Aryan Murari, Satya Kamisetty and Rushik Parikh.</p>
+                 <p>© 2024 All Rights Reserved SRMIST. Design by Aryan Murari, Satya Kamisetty and Rushik Parikh.</p>
               </div>
            </div>
         </div>

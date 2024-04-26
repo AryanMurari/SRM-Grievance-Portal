@@ -67,12 +67,12 @@
                               <a class="nav-link" href="about.html">Policy</a>
                            </li>
                            <li class="nav-item">
-                              <a class="nav-link" href="requesttab.html">Requests</a>
+                              <a class="nav-link" href="requesttab.php">Requests</a>
                            </li> <li class="nav-item">
                               <a class="nav-link" href="solutionstab.html">Solutions</a>
                            </li>
                            <li class="nav-item active">
-                              <a class="nav-link" href="login.html">Login</a>
+                              <a class="nav-link" href="login.php">Login</a>
                            </li>
                         </ul>
                      </div>
@@ -95,10 +95,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Student Grievance Form</title>
 </head>
-<body>
-  <h1>Student Grievance Form</h1>
-  <form id="grievance-form">
-    <fieldset>
+<body class="main-layout inner_page">
+   <div class="container my-4">
+      <div class="titlepage text_align_center">
+  <h2>Student Grievance Form</h2>
+  </div>
+  <form  name="loginForm" id="request" class="main_form" onsubmit="redirect()" novalidate>
+  
       <legend>Student Information</legend>
       <div>
         <label for="student-name">Student Name:</label>
@@ -116,8 +119,7 @@
         <label for="email">Email Address:</label>
         <input type="email" id="email" name="email" required>
       </div>
-    </fieldset>
-    <fieldset>
+   
       <legend>Grievance Details</legend>
       <div>
         <label for="grievance-type">Grievance Type:</label>
@@ -145,16 +147,16 @@
         <label for="attachments">Attachments (optional):</label>
         <input type="file" id="attachments" name="attachments" multiple>
       </div>
-    </fieldset>
-    <fieldset>
+    
       <legend>Desired Outcome</legend>
       <div>
         <label for="desired-outcome">What resolution are you seeking?</label>
         <textarea id="desired-outcome" name="desired_outcome" rows="5"></textarea>
       </div>
-    </fieldset>
-    <button type="submit">Submit Grievance</button>
+    
+    <button type="submit" class="send_btn">Submit Grievance</button>
   </form>
+  </div>
   
   <script>
   // Script to show/hide "Other" grievance type description
@@ -176,7 +178,7 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <p>© 2020 All Rights Reserved SRMIST. Design by Aryan Murari, Satya Kamisetty and Rushik Parikh.</p>
+                  <p>© 2024 All Rights Reserved SRMIST. Design by Aryan Murari, Satya Kamisetty and Rushik Parikh.</p>
                </div>
             </div>
          </div>
