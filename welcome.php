@@ -22,7 +22,10 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
   </head>
   <body class="main-layout inner_page">
     <?php require '_nav.php' ?>
-    Welcome - <?php echo $_SESSION['username']?>
+    <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br>
+    <div class="titlepage text_align_center">
+   <h2> Welcome  <?php echo $_SESSION['username']?><h2>
+</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

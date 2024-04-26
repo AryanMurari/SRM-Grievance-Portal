@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
+    header("location: login.php");
+    exit;
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +36,7 @@
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
  
   <style>
     /* Basic styling for search bar and results table */
@@ -58,11 +69,11 @@
   </style>
 </head>
 <body class="main-layout inner_page">
-  <!-- loader  -->
+  <!-- loader --> 
   <div class="loader_bg">
      <div class="loader"><img src="images/loading.gif" alt="#"/></div>
   </div>
-  <!-- end loader -->
+   <!-- end loader -->
   <!-- header -->
   <div class="header">
     <div class="container-fluid">
@@ -109,7 +120,9 @@
     </div>
  </div>
  <!-- end header inner -->
-
+ <div class="titlepage text_align_center">
+  <h2> Welcome  <?php echo $_SESSION['username']?><h2>
+</div>
  <h1 style="margin: 20px;"><b>Request Tab</b></h1>
   
   <div id="search-container">
@@ -170,6 +183,7 @@
       }
     });
   </script>
+  <br><br><br><br><br><br><br><br><br>
 <!--  footer -->
 <footer>
   <div class="footer">
@@ -195,5 +209,6 @@
 <script>
   AOS.init();
 </script>
+
 </body>
 </html>

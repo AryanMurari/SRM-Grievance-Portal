@@ -34,10 +34,13 @@
                          <a class="nav-link" href="about.html">Policy</a>
                       </li>
                       <li class="nav-item">
+                         <a class="nav-link" href="newrequest.html">New Request</a>
+                      </li>
+                      <li class="nav-item">
                         <a class="nav-link" href="requesttab.html">Requests</a>
                      </li>
                       <li class="nav-item active">
-                         <a class="nav-link" href="login.html">Login</a>
+                         <a class="nav-link" href="login.php">Login</a>
                       </li>
                    </ul>
                 </div>

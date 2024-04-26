@@ -61,7 +61,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
      <form action="/SRM-Grievance-Portal/signup.php" method="post" name="loginForm" id="request" class="main_form" onsubmit="redirect()" novalidate>
         <div class="form-group">
             <!--<label for="username">Username</label>-->
-            <input type="text" id="username" name="username" aria-describedby="emailHelp" class="contactus" placeholder="Email*" type="email" name="email">
+            <input type="text" id="username" name="username" aria-describedby="emailHelp" class="contactus" placeholder="Username" type="email" name="email">
             
         </div>
         <div class="form-group">

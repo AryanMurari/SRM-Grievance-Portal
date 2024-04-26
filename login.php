@@ -15,14 +15,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         session_start();
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $username;
-        header("location: welcome.php");
+        header("location: requesttab.php");
 
     } 
     else if ($num == 0){
         $login = true;
         session_start();
         $_SESSION['loggedin'] = true;
-        $_SESSION['username'] = 'admin';
+        $_SESSION['username'] = "admin";
         header("location: signup.php");
 
     } 
@@ -89,7 +89,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
      <form action="/SRM-Grievance-Portal/login.php" method="post" name="loginForm" id="request" class="main_form" onsubmit="redirect()" novalidate>
         <div class="form-group">
            <!-- <label for="username">Username</label>-->
-            <input type="text" class="contactus" placeholder="Email*" id="username" name="username" aria-describedby="emailHelp">
+            <input type="text" class="contactus" placeholder="Username" id="username" name="username" aria-describedby="emailHelp">
             
         </div>
         <div class="form-group">
@@ -101,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <button type="submit" class="send_btn">Login</button>
      </form>
     </div>
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br>
     <!-- Optional JavaScript -->
     <!-- Javascript files-->
     <script src="js/jquery.min.js"></script>
