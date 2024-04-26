@@ -1,3 +1,4 @@
+<link rel="icon" type="image/x-icon" href="/images/titlelogo.png">
 <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- style css -->
   <link rel="stylesheet" href="css/style.css">

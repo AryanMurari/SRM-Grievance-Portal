@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         session_start();
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = 'admin';
-        header("location: requesttab.html");
+        header("location: signup.php");
 
     } 
     else{
@@ -34,15 +34,31 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="loginApp">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="icon" type="image/x-icon" href="/images/titlelogo.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <title>Login</title>
   </head>
   <body class="main-layout inner_page">
@@ -65,22 +81,24 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div> ';
     }
     ?>
-
+    <br><br>
     <div class="container my-4">
-     <h1 class="text-center">Login to our website</h1>
-     <form action="/SRM-Grievance-Portal/login.php" method="post">
+    <div class="titlepage text_align_center">
+                     <h2>Login</h2>
+                  </div>
+     <form action="/SRM-Grievance-Portal/login.php" method="post" name="loginForm" id="request" class="main_form" onsubmit="redirect()" novalidate>
         <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp">
+           <!-- <label for="username">Username</label>-->
+            <input type="text" class="contactus" placeholder="Email*" id="username" name="username" aria-describedby="emailHelp">
             
         </div>
         <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password">
+           <!-- <label for="password">Password</label>-->
+            <input type="password" class="contactus" placeholder="Password" id="password" name="password">
         </div>
        
          
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="send_btn">Login</button>
      </form>
     </div>
 <br><br><br><br><br><br><br><br><br><br>
@@ -93,21 +111,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<!--  footer -->
-<footer>
-   <div class="footer">
-     
-      <div class="copyright">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <p>© 2024 All Rights Reserved SRMIST. Design by Aryan Murari, Satya Kamisetty and Rushik Parikh.</p>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
- </footer>
- <!-- end footer -->  
+    <?php require '_footer.php' ?> 
 </body>
 </html>

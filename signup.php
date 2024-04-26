@@ -55,24 +55,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     ?>
 
     <div class="container my-4">
-     <h1 class="text-center">Signup to our website</h1>
-     <form action="/SRM-Grievance-Portal/signup.php" method="post">
+    <div class="titlepage text_align_center">
+     <h2>Create New Account</h2>
+    </div>
+     <form action="/SRM-Grievance-Portal/signup.php" method="post" name="loginForm" id="request" class="main_form" onsubmit="redirect()" novalidate>
         <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp">
+            <!--<label for="username">Username</label>-->
+            <input type="text" id="username" name="username" aria-describedby="emailHelp" class="contactus" placeholder="Email*" type="email" name="email">
             
         </div>
         <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password">
+            <!--<label for="password">Password</label>-->
+            <input type="password" class="contactus"" id="password" name="password" placeholder="Password">
         </div>
         <div class="form-group">
-            <label for="cpassword">Confirm Password</label>
-            <input type="password" class="form-control" id="cpassword" name="cpassword">
+            <!--<label for="cpassword">Confirm Password</label>-->
+            <input type="password" class="contactus" id="cpassword" name="cpassword" placeholder="Confirm Password">
             <small id="emailHelp" class="form-text text-muted">Make sure to type the same password</small>
         </div>
          
-        <button type="submit" class="btn btn-primary">SignUp</button>
+        <button class="send_btn" type="submit">Sign Up</button>
      </form>
     </div>
 
