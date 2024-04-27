@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Policy Page</title>
+      <link rel="icon" type="image/x-icon" href="/images/titlelogo.png">
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">    
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout inner_page">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+      </div>
+      <!-- end loader -->
+       <!-- header -->
+  <div class="header">
+   <div class="container-fluid">
+      <div class="row d_flex">
+         <div class=" col-md-2 col-sm-3 col logo_section">
+            <div class="full">
+               <div class="center-desk">
+                  <div class="logo">
+                     <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-8 col-sm-12">
+            <nav class="navigation navbar navbar-expand-md navbar-dark ">
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarsExample04">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about.html">Policy</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link" href="requesttab.php">Requests</a>
+                    </li>
+                     <li class="nav-item active">
+                        <a class="nav-link" href="login.php">Login</a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+         <div class="col-md-2">
+            <ul class="email text_align_right">
+               <li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+               <li class="d_none"> <a href="Javascript:void(0)"><i class="fa fa-search" style="cursor: pointer;" aria-hidden="true"></i></a> </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- end header inner -->
+      <!-- about -->
+      <div class="about">
+         <div class="container-fluid">
+            <div class="row d_flex">
+               <div class="col-md-6">
+                  <div class="titlepage text_align_left">
+                     <h2>Grievance Policy for College Students :-</h2>
+
+                     <section>
+                       <h2>Introduction</h2>
+                       <p>This policy outlines the guidelines for filing grievances on this website.</p>
+                     </section>
+                     <section>
+                       <h2>What can be reported?</h2>
+                       <p>Academic Concerns:</p>
+                       <ul>
+                         <p>Grading issues</p>
+                         <p>Faculty disputes</p>
+                         <p>Unfair assessments</p>
+                       </ul>
+                       <p>Non-Academic Concerns:</p>
+                       <ul>
+                         <p>Discrimination</p>
+                         <p>Harassment</p>
+                         <p>Bullying</p>
+                         <p>Accessibility issues</p>
+                         <p>Housing problems</p>
+                         <p>Violation of college policies</p>
+                       </ul>
+                     </section>
+                   
+                     <section>
+                       <h2>What cannot be reported?</h2>
+                       <ul>
+                         <p>Personal disputes between students unrelated to the college environment.</p>
+                         <p>Minor inconveniences not affecting student well-being or academic progress.</p>
+                       </ul>
+                     </section>
+                   
+                     <section>
+                       <h2>Steps to file a grievance</h2>
+                       <ol>
+                         <p>
+                           <strong>Create an account:</strong> Register on the website with your college ID and a secure password.
+                         </p>
+                         <p>
+                           <strong>Initiate a complaint:</strong> Choose the appropriate category (academic or non-academic) for your grievance.
+                         </p>
+                         <p>
+                           <strong>Provide details:</strong> Fill out the online form with a clear and concise description of the issue.
+                           <ul>
+                             <p>Include relevant details like dates, names of individuals involved (if applicable), and any supporting evidence (documents, witness statements).</p>
+                           </ul>
+                         </p>
+                         <p>
+                           <strong>Submit the grievance:</strong> Once you've reviewed the information for accuracy, submit the form electronically.
+                         </p>
+                         <p>
+                           <strong>Acknowledge receipt:</strong> You will receive an automated email acknowledging your grievance and a reference number for future communication.
+                         </p>
+                       </ol>
+                     </section>
+                   
+                     <section>
+                       <h2>Confidentiality</h2>
+                       <p>All grievances will be treated with confidentiality. You have the right to request anonymity during the initial stages of the process.</p>
+                     </section>
+                   
+                     <section>
+                       <h2>Response Timeline</h2>
+                       <p>
+                         A designated college representative will review your grievance within [Number] business days. 
+                         You will receive updates on the investigation process via email. 
+                         The representative will aim to reach a resolution within [Number] business days, following college procedures.
+                       </p>
+                     </section>
+                   
+                     <section>
+                       <h2>Additional Information</h2>
+                       <ul>
+                         <p>This website serves as a platform for initial reporting.</p>
+                         <p>Depending on the nature of the grievance, the college might require further documentation or in-person meetings.</p>
+                         <p>Students are encouraged to explore informal resolution options with faculty advisors, department heads, or relevant college personnel before filing a formal grievance.</p>
+                       </ul>
+                     </section>
+                   
+                     <p>By using this website, you acknowledge that you have read and understood this grievance policy.</p>
+                     <div class="link_btn">
+                        <a class="read_more" href="about.html">Read More</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="about_img text_align_center">
+                     <figure><img src="images/about.png" alt="#"/></figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end about -->
+      <!--  footer -->
+<footer>
+   <div class="footer">
+     
+      <div class="copyright">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <p>© 2024 All Rights Reserved SRMIST. Design by Aryan Murari, Satya Kamisetty and Rushik Parikh.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+ </footer>
+ <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/custom.js"></script>
+      <script>
+         AOS.init();
+      </script>
+   </body>
+</html>

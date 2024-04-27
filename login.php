@@ -102,7 +102,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <button type="submit" class="send_btn">Login</button>
      </form>
     </div>
-<br><br><br>
     <!-- Optional JavaScript -->
     <!-- Javascript files-->
     <script src="js/jquery.min.js"></script>
