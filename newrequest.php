@@ -1,3 +1,27 @@
+<?php
+$showAlert = false;
+$showError = false;
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    include '_dbconnect.php';
+    $username = $_POST["username"];
+    $studentname = $_POST["studentname"];
+    $studentid = $_POST["studentid"];
+    $batchname = $_POST["batchname"];
+    $emailid = $_POST["emailid"];
+    $grievancetype = $_POST["grievancetype"];
+    $grievancedetails = $_POST["grievancedetails"];
+   // $exists=false;
+        $sql = "INSERT INTO `grievancestatus` (`username`, `studentname`, `studentid`, `batchname`, `emailid`, `grievancetype`, `grievancedetails`,  `dt`) VALUES ('$username', '$studentname', '$studentid', '$batchname','$emailid','$grievancetype','$grievancedetails', current_timestamp())";
+        $result = mysqli_query($conn, $sql);
+        if ($result){
+            $showAlert = true;
+        }
+        else{
+         $showError = "Passwords do not match";
+     }
+}
+    
+?>
 <!DOCTYPE html>
 <html lang="en" ng-app="loginApp">
    <head>
@@ -35,6 +59,24 @@
    </head>
    <!-- body -->
    <body class="main-layout inner_page">
+   <?php
+    if($showAlert){
+    echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> Your Grievance has been succesfully submitted!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div> ';
+    }
+    if($showError){
+    echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Error!</strong> '. $showError.'
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div> ';
+    }
+    ?>
       <!-- loader  -->
       <div class="loader_bg">
          <div class="loader"><img src="images/loading.gif" alt="#"/></div>
@@ -100,59 +142,52 @@
       <div class="titlepage text_align_center">
   <h2>Student Grievance Form</h2>
   </div>
-  <form  name="loginForm" id="request" class="main_form" onsubmit="redirect()" novalidate>
+  <form action="/SRM-Grievance-Portal/newrequest.php" method="post" name="loginForm" id="request" class="main_form" onsubmit="redirect()" novalidate>
   
-      <legend>Student Information</legend>
+      <legend><b>Enter Details</b></legend>
       <div>
-        <label for="student-name">Student Name:</label>
-        <input type="text" id="student-name" name="student_name" required>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
       </div>
       <div>
-        <label for="student-id">Student ID:</label>
-        <input type="text" id="student-id" name="student_id" required>
+        <label for="studentname">Student Name:</label>
+        <input type="text" id="studentname" name="studentname" required>
       </div>
       <div>
-        <label for="program">Program:</label>
-        <input type="text" id="program" name="program" required>
+        <label for="studentid">Student ID:</label>
+        <input type="text" id="studentid" name="studentid" required>
       </div>
       <div>
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
+        <label for="batchname">Batch:</label>
+        <input type="text" id="batchname" name="batchname" required>
+      </div>
+      <div>
+        <label for="emailid">Email Address:</label>
+        <input type="emailid" id="email" name="emailid" required>
       </div>
    
-      <legend>Grievance Details</legend>
       <div>
-        <label for="grievance-type">Grievance Type:</label>
-        <select id="grievance-type" name="grievance_type">
+        <label for="grievancetype">Grievance Type:</label>
+        <select id="grievancetype" name="grievancetype">
           <option value="">Select a type</option>
           <option value="academic">Academic Issue</option>
           <option value="non-academic">Non-Academic Issue</option>
           <option value="discrimination">Discrimination or Harassment</option>
-          <option value="other">Other (Please Specify)</option>
+          <!--<option value="other">Other (Please Specify)</option>-->
         </select>
       </div>
-      <div id="grievance-type-other" style="display: none;">
+     <!-- <div id="grievance-type-other" style="display: none;">
         <label for="grievance-type-other-text">Please specify the type of grievance:</label>
         <textarea id="grievance-type-other-text" name="grievance_type_other" rows="2"></textarea>
-      </div>
+      </div>-->
       <div>
-        <label for="grievance-description">Grievance Description:</label>
-        <textarea id="grievance-description" name="grievance_description" rows="10" required></textarea>
+        <label for="grievancedetails">Grievance Description:</label>
+        <textarea id="grievancedetails" name="grievancedetails" rows="10" required></textarea>
       </div>
     <button type="submit" class="send_btn">Submit Grievance</button>
   </form>
   </div>
-  
-  <script>
-  // Script to show/hide "Other" grievance type description
-  document.getElementById('grievance-type').addEventListener('change', function() {
-    if (this.value === 'other') {
-      document.getElementById('grievance-type-other').style.display = 'block';
-    } else {
-      document.getElementById('grievance-type-other').style.display = 'none';
-    }
-  });
-  </script>
+ 
 </body>
 </html>
 <!--  footer -->
