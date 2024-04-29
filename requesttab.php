@@ -101,7 +101,10 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                          <a class="nav-link" href="about.html">Policy</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="solutionstab.html">Solutions</a>
+                         <a class="nav-link" href="newrequest.php">New Request</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="solutionstab.php">Solutions</a>
                      </li>
                       <li class="nav-item active">
                          <a class="nav-link" href="login.html">Login</a>
@@ -133,13 +136,13 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
   <table id="results-table">
     <thead>
       <tr>
-        <th>ID</th>
-        <th>Subject</th>
-        <th>Requster name</th>
-        <th>Assigned to</th>
-        <th>Due By</th>
-        <th>Status</th>
+        <th>Student Name</th>
+        <th>Student ID</th>
+        <th>Batch</th>
+        <th>Email ID</th>
+        <th>Grievance Type</th>
         <th>Created On</th>
+        <th>Status</th>
       </tr>
     </thead>
     <tbody>

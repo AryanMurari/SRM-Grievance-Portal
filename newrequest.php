@@ -11,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $grievancetype = $_POST["grievancetype"];
     $grievancedetails = $_POST["grievancedetails"];
    // $exists=false;
-        $sql = "INSERT INTO `grievancestatus` (`username`, `studentname`, `studentid`, `batchname`, `emailid`, `grievancetype`, `grievancedetails`,  `dt`) VALUES ('$username', '$studentname', '$studentid', '$batchname','$emailid','$grievancetype','$grievancedetails', current_timestamp())";
+        $sql = "INSERT INTO `grievancestatus` (`username`, `studentname`, `studentid`, `batchname`, `emailid`, `grievancetype`, `grievancedetails`,  `dt`, `Status`) VALUES ('$username', '$studentname', '$studentid', '$batchname','$emailid','$grievancetype','$grievancedetails', current_timestamp(), 'Pending')";
         $result = mysqli_query($conn, $sql);
         if ($result){
             $showAlert = true;

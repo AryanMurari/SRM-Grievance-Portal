@@ -6,7 +6,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
     exit;
 }
 
-
+include '_dbconnect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,11 +66,11 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
   </style>
 </head>
 <body class="main-layout inner_page">
-  <!-- loader  -->
+  <!-- loader  --
   <div class="loader_bg">
      <div class="loader"><img src="images/loading.gif" alt="#"/></div>
   </div>
-  <!-- end loader -->
+  <-- end loader -->
   <!-- header -->
   <div class="header">
     <div class="container-fluid">
@@ -98,7 +98,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                          <a class="nav-link" href="about.html">Policy</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="newrequest.html">New Request</a>
+                        <a class="nav-link" href="newrequest.php">New Request</a>
                      </li>
                       <li class="nav-item">
                         <a class="nav-link" href="requesttab.php">Requests</a>
@@ -133,11 +133,25 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
   <table id="results-table">
     <thead>
       <tr>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Views</th>
+      <th>Student Name</th>
+        <th>Student ID</th>
+        <th>Batch</th>
+        <th>Email ID</th>
+        <th>Grievance Type</th>
         <th>Created On</th>
-        <th>Created By</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+      <td>
+        <?php $sql ="Select 'studentname' FROM `grievancestatus` Where dt='2024-04-28 22:16:54.000000'";
+      $result = mysqli_query($conn, $sql); ?>
+      </td>
+        <td>Student ID</td>
+        <td>Batch</td>
+        <td>Email ID</td>
+        <td>Grievance Type</td>
+        <td>Created On</td>
+        <td>Status</td>
       </tr>
     </thead>
     <tbody>

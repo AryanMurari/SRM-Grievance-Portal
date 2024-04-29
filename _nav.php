@@ -34,7 +34,7 @@
                          <a class="nav-link" href="about.html">Policy</a>
                       </li>
                       <li class="nav-item">
-                         <a class="nav-link" href="newrequest.html">New Request</a>
+                         <a class="nav-link" href="newrequest.php">New Request</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="requesttab.html">Requests</a>
